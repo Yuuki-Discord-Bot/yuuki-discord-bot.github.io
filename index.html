@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuuki - SAO Moderation Bot</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body class="bg-gray-900 text-white font-sans overflow-x-hidden">
+    <!-- Partikel-Hintergrund -->
+    <div id="particles-js" class="absolute inset-0 z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-purple-900 p-4 fixed w-full top-0 z-10 animate-slide-down">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold animate-glow">Yuuki Bot</h1>
+            <div class="space-x-4">
+                <a href="#home" class="hover:text-purple-300 transition-colors">Home</a>
+                <a href="#features" class="hover:text-purple-300 transition-colors">Features</a>
+                <a href="#commands" class="hover:text-purple-300 transition-colors">Commands</a>
+                <a href="#invite" class="hover:text-purple-300 transition-colors">Invite</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative z-10">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 p-8 animate-fade-in-left">
+                <h2 class="text-4xl font-bold mb-4 animate-pulse">Willkommen bei Yuuki!</h2>
+                <p class="text-lg mb-6">Dein Anime-inspirierter Moderation Bot aus Sword Art Online. Halte deinen Server sicher und organisiert mit Yuuki's Hilfe!</p>
+                <button class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full text-lg transition duration-300 animate-bounce">Bot einladen</button>
+            </div>
+            <div class="md:w-1/2 p-8">
+                <img src="assets/images/yuuki.png" alt="Yuuki" class="w-full rounded-lg shadow-lg animate-float">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-800 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 animate-glow">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                <div class="bg-purple-900 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300 animate-fade-in-up">
+                    <h3 class="text-xl font-semibold mb-2">Moderation</h3>
+                    <p>Banne, kicke oder mute User mit einfachen Befehlen.</p>
+                </div>
+                <div class="bg-purple-900 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300 animate-fade-in-up animation-delay-200">
+                    <h3 class="text-xl font-semibold mb-2">Automatisierung</h3>
+                    <p>Automatische Moderation gegen Spam und Beleidigungen.</p>
+                </div>
+                <div class="bg-purple-900 p-6 rounded-lg shadow-lg hover:scale-105 transition duration-300 animate-fade-in-up animation-delay-400">
+                    <h3 class="text-xl font-semibold mb-2">Anime-Style</h3>
+                    <p>Antworten im Stil von Yuuki aus SAO!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section id="commands" class="py-16 relative z-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 animate-glow">Commands</h2>
+            <div class="space-y-4 px-4" id="command-list">
+                <div class="bg-gray-800 p-4 rounded-lg animate-slide-in-left">
+                    <code class="text-purple-400">!ban @user [grund]</code> - Bannt einen User
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg animate-slide-in-left animation-delay-200">
+                    <code class="text-purple-400">!kick @user [grund]</code> - Kickt einen User
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg animate-slide-in-left animation-delay-400">
+                    <code class="text-purple-400">!mute @user [zeit]</code> - Mutet einen User
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invite Section -->
+    <section id="invite" class="py-16 bg-purple-900 text-center relative z-10">
+        <h2 class="text-3xl font-bold mb-6 animate-glow">Lade Yuuki ein!</h2>
+        <p class="text-lg mb-6 animate-fade-in">Bringe Ordnung in deinen Server mit Yuuki's Hilfe.</p>
+        <a href="#" class="bg-white text-purple-900 px-6 py-3 rounded-full text-lg hover:bg-gray-200 transition duration-300 animate-bounce">Jetzt einladen</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-4 text-center relative z-10">
+        <p>© 2025 Yuuki Bot. Inspired by Sword Art Online.</p>
+    </footer>
+
+    <script src="js/particles.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
