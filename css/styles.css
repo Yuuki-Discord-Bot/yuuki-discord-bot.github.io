@@ -1,61 +1,88 @@
-/* Custom Anime-Style Animations */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+/* Moderne Typografie und Layout */
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
 }
-
-@keyframes glow {
-    0% { text-shadow: 0 0 5px #b794f4; }
-    50% { text-shadow: 0 0 20px #b794f4, 0 0 30px #805ad5; }
-    100% { text-shadow: 0 0 5px #b794f4; }
-}
-
-@keyframes fade-in-left {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fade-in-up {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slide-in-left {
-    from { opacity: 0; transform: translateX(-100px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slide-down {
-    from { opacity: 0; transform: translateY(-100px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-float { animation: float 3s ease-in-out infinite; }
-.animate-glow { animation: glow 2s ease-in-out infinite; }
-.animate-fade-in-left { animation: fade-in-left 1s ease-out; }
-.animate-fade-in-up { animation: fade-in-up 1s ease-out; }
-.animate-slide-in-left { animation: slide-in-left 1s ease-out; }
-.animate-slide-down { animation: slide-down 1s ease-out; }
-.animate-fade-in { animation: fade-in-up 1s ease-out; }
-
-.animation-delay-200 { animation-delay: 0.2s; }
-.animation-delay-400 { animation-delay: 0.4s; }
 
 body {
-    font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #1a202c, #2d3748);
     position: relative;
+    line-height: 1.6;
 }
 
 code {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Particles Container */
+/* Partikel-Hintergrund */
 #particles-js {
     background: transparent;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: fixed;
+}
+
+/* Animationen */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+}
+
+/* Accordion Styling */
+.accordion-button {
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.accordion-content {
+    transition: all 0.3s ease;
+}
+
+.accordion-content.hidden {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-content:not(.hidden) {
+    opacity: 1;
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* styles.css */
+
+/* Anpassung für das Sprach-Dropdown mit Text */
+#language-select {
+    padding: 0.5rem;
+    background-color: #2d2d2d; /* Dunkler Hintergrund */
+    border: none;
+    color: white; /* Textfarbe */
+    -webkit-appearance: none; /* Standard-Dropdown-Pfeil entfernen (Chrome/Safari) */
+    -moz-appearance: none; /* Standard-Dropdown-Pfeil entfernen (Firefox) */
+    appearance: none; /* Standard-Dropdown-Pfeil entfernen */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='18px' height='18px'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Eigener Dropdown-Pfeil */
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    padding-right: 2rem; /* Platz für den Pfeil */
+}
+
+#language-select option {
+    color: white; /* Textfarbe für Optionen */
+    background-color: #2d2d2d; /* Hintergrund der Optionen */
+}
+
+/* Hover-Effekt für das Dropdown */
+#language-select:hover {
+    background-color: #4b0082; /* Leichtes Highlight bei Hover */
 }

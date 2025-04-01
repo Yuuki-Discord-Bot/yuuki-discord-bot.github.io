@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuuki - Commands</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-purple-950 text-white font-poppins overflow-x-hidden">
+    <div id="particles-js" class="absolute inset-0 z-0 opacity-50"></div>
+
+    <nav class="bg-opacity-80 bg-purple-900 backdrop-blur-md p-4 fixed w-full top-0 z-20 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tight">Yuuki</h1>
+            <div class="flex items-center space-x-6 text-sm uppercase tracking-wider">
+                <div class="space-x-6">
+                    <a href="index.html#home" data-lang="nav_home" class="hover:text-purple-300 transition-colors duration-200">Home</a>
+                    <a href="index.html#features" data-lang="nav_features" class="hover:text-purple-300 transition-colors duration-200">Features</a>
+                    <a href="commands.html" data-lang="nav_commands" class="hover:text-purple-300 transition-colors duration-200">Commands</a>
+                    <a href="index.html#invite" data-lang="nav_invite" class="hover:text-purple-300 transition-colors duration-200">Invite</a>
+                </div>
+                <select id="language-select" class="bg-gray-800 text-white p-2 rounded-md focus:outline-none">
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ru">Русский</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen pt-24 pb-20 relative z-10">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12" data-lang="commands_title">Slash Commands</h2>
+            <p class="text-center text-lg text-gray-300 mb-12 max-w-2xl mx-auto" data-lang="commands_desc">Discover all of Yuuki's commands, organized by category.</p>
+
+            <div class="space-y-4 max-w-3xl mx-auto">
+                <div class="accordion-item">
+                    <button class="accordion-button w-full bg-gray-800 bg-opacity-70 backdrop-blur-md p-5 rounded-xl text-left text-xl font-semibold hover:bg-gray-700 transition-all duration-300 flex justify-between items-center">
+                        <span data-lang="moderation_commands">Moderation Commands</span>
+                        <span class="accordion-icon">↓</span>
+                    </button>
+                    <div class="accordion-content bg-gray-800 bg-opacity-90 p-5 rounded-b-xl hidden">
+                        <p data-lang="moderation_ban">/ban @user [reason] - Bans a user.</p>
+                        <p data-lang="moderation_kick">/kick @user [reason] - Kicks a user.</p>
+                        <p data-lang="moderation_mute">/mute @user [duration] - Mutes a user.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button w-full bg-gray-800 bg-opacity-70 backdrop-blur-md p-5 rounded-xl text-left text-xl font-semibold hover:bg-gray-700 transition-all duration-300 flex justify-between items-center">
+                        <span data-lang="utility_commands">Utility Commands</span>
+                        <span class="accordion-icon">↓</span>
+                    </button>
+                    <div class="accordion-content bg-gray-800 bg-opacity-90 p-5 rounded-b-xl hidden">
+                        <p data-lang="utility_info">/info @user - User information.</p>
+                        <p data-lang="utility_serverinfo">/serverinfo - Server information.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-button w-full bg-gray-800 bg-opacity-70 backdrop-blur-md p-5 rounded-xl text-left text-xl font-semibold hover:bg-gray-700 transition-all duration-300 flex justify-between items-center">
+                        <span data-lang="fun_commands">Fun Commands</span>
+                        <span class="accordion-icon">↓</span>
+                    </button>
+                    <div class="accordion-content bg-gray-800 bg-opacity-90 p-5 rounded-b-xl hidden">
+                        <p data-lang="fun_quote">/quote - Random SAO quote.</p>
+                        <p data-lang="fun_animefact">/animefact - Anime fun fact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 p-6 text-center relative z-10">
+        <p class="text-gray-400" data-lang="footer">© 2025 Yuuki Bot. Inspired by Sword Art Online.</p>
+    </footer>
+
+    <script src="js/particles.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
